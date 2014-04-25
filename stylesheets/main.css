@@ -12,6 +12,13 @@
   position: fixed;
 }
 
+#footer {
+  clear: both;
+  height: 10%;
+  width: 97.5%;
+  background-color: #1947D1;
+}
+
 .h1top {
   color: white;
   text-align: center;
