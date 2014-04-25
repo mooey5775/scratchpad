@@ -1,4 +1,8 @@
 /* Main CSS File for Coding (mooey5775) */
+* {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 #header {
   margin: -20px 10px 10px 10px;
   border-radius: 15px;
@@ -6,4 +10,9 @@
   height: 15%;
   width: 97.5%;
   position: fixed;
+}
+
+.h1top {
+  color: white;
+  text-align: center;
 }
