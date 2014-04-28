@@ -8,7 +8,7 @@
   border-radius: 15px;
   background-color: #003399;
   height: 7em;
-  width: 97.5%;
+  width: 100%;
   position: fixed;
   z-index: 1;
 }
@@ -16,7 +16,7 @@
 #footer {
   clear: both;
   height: 3em;
-  width: 97.5%;
+  width: 100%;
   background-color: #003399;
   border-radius: 15px;
   position: relative;
