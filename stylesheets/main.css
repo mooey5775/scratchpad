@@ -13,11 +13,11 @@
 
 #footer {
   clear: both;
-  height: 3em;
-  width: 97.5%;
-  background-color: #003399;
-  border-radius: 15px;
-  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .body {
