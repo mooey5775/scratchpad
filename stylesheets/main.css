@@ -1,7 +1,6 @@
 /* Main CSS File for Coding (mooey5775) */
 * {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #CCCCCC;
 }
 
 #header {
@@ -39,4 +38,8 @@
   width: 90%;
   float: right;
   position: relative;
+}
+
+body {
+  background-color: #CCCCCC;
 }
