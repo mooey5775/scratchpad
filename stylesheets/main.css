@@ -6,7 +6,7 @@
 #header {
   margin: -20px 0px 10px 0px;
   border-radius: 15px;
-  background-color: #003399;
+  border-bottom: 1px solid black;
   height: 7em;
   width: 97.5%;
   position: fixed;
