@@ -20,12 +20,6 @@
   position: relative;
 }
 
-.h1top {
-  color: black;
-  text-align: center;
-  font-size: 2em;
-}
-
 .body {
   margin: 100px 10px 10px 10px;
   border-radius: 15px;
