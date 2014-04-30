@@ -44,8 +44,16 @@ section {
   font-size: 3em;
 }
 
+#but:hover {
+  background-color: #3E5A93;
+}
+
 #butchild {
   position: relative;
   top: 50%;
   margin-top: -0.5em;
+}
+
+.buta {
+  text-decoration: none;
 }
