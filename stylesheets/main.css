@@ -20,16 +20,6 @@
   border-bottom: 1px solid black;
 }
 
-.body {
-  margin: 100px 10px 10px 10px;
-  border-radius: 15px;
-  background-color: #CC9900;
-  height: 30em;
-  width: 90%;
-  float: right;
-  position: relative;
-}
-
 body {
   background-color: #CCCCCC;
   padding: 0 0 0 0;
