@@ -40,4 +40,10 @@ section {
   width: 30%;
   background-color: #4D70B8;
   display: inline-block;
+  color: white;
+}
+
+.butchild {
+  position: absolute;
+  top: 50%;
 }
