@@ -46,4 +46,5 @@ section {
 #butchild {
   position: relative;
   top: 50%;
+  margin-top: -0.5em;
 }
