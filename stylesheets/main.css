@@ -32,22 +32,12 @@ section {
   margin-bottom: 1em;
 }
 
-#but1 {
+#but {
   border: 1px solid black;
   border-radius: 15px;
   margin: 10px;
-  height: 100%;
-  width: 40%;
+  height: 5em;
+  width: 30%;
   background-color: #4D70B8;
-  display: inline-block;
-}
-
-#but2 {
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 10px;
-  height: 100%;
-  width: 40%;
-  background-color: #339966;
   display: inline-block;
 }
