@@ -39,7 +39,7 @@ section {
   height: 40%;
   width: 40%;
   background-color: #4D70B8;
-  /* display: inline-block; */
+  display: inline-block;
 }
 
 #but2 {
@@ -49,5 +49,5 @@ section {
   height: 40%;
   width: 40%;
   background-color: #339966;
-  /* display: inline-block; */
+  display: inline-block;
 }
