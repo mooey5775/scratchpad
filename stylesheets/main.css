@@ -31,3 +31,12 @@ section {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+#but1 {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 10px 5% 10px 10%;
+  height: 40%;
+  width: 40%;
+  background-color: #4D70B8;
+}
