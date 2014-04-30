@@ -43,7 +43,7 @@ section {
   color: white;
 }
 
-.butchild {
+#butchild {
   position: absolute;
   top: 50%;
 }
