@@ -36,7 +36,7 @@ section {
   border: 1px solid black;
   border-radius: 15px;
   margin: 10px;
-  height: 40%;
+  height: 100%;
   width: 40%;
   background-color: #4D70B8;
   display: inline-block;
@@ -46,7 +46,7 @@ section {
   border: 1px solid black;
   border-radius: 15px;
   margin: 10px;
-  height: 40%;
+  height: 100%;
   width: 40%;
   background-color: #339966;
   display: inline-block;
