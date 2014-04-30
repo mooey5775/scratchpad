@@ -32,6 +32,10 @@ section {
   margin-bottom: 1em;
 }
 
+#butcontain {
+  float: center;
+}
+
 #but1 {
   border: 1px solid black;
   border-radius: 15px;
