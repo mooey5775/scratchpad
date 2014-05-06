@@ -21,6 +21,13 @@ function loadJS() {
   }
 }
 
+function viewHTML() {
+  var htmltext = document.getElementById("htmltext").value;
+  localStorage.setItem("htmltext", htmltext);
+  var win = window.open("viewhtml.html", "_blank");
+  win.focus();
+}
+
 function saveHTML() {
   var htmltext = document.getElementById("htmltext").value;
   localStorage.setItem("htmltext", htmltext);
