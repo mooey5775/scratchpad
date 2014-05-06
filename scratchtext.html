@@ -11,7 +11,6 @@
 				color: gray;
 			}
 			gray-small {
-				color: gray;
 				font-size: 8px;
 			}
 			roman {
@@ -90,10 +89,11 @@
       <div style="margin-left: 1em; margin-bottom: 1em;">
         <h1>Text Scratchpad</h1>
         Title:<br/>
-			  <input type="text" id="title" onkeyup="didType()"><br/><br/>
-			  Body: <gray-small>(HTML code allowed)</gray-small><br/>
-			  <textarea id="body" style="height: 12em; width: 70%;"></textarea>
-			  <br/>Styles: <button onclick="bold()">Bold</button><button onclick="h1()"><h1>Large Font</h1></button><button onclick="h6()"><h6>Small Font</h6></button><button onclick="roman()">Times New Roman</button><button onclick="gray()">Gray Text</button><button onclick="p()">Paragraph</button>
+	<input type="text" id="title" onkeyup="didType()"><br/><br/>
+	Body: <gray-small>(HTML code allowed)</gray-small><br/>
+	<textarea id="body" style="height: 12em; width: 70%;"></textarea>
+	<br/>Styles: <button onclick="bold()">Bold</button><button onclick="h1()"><h1>Large Font</h1></button><button onclick="h6()"><h6>Small Font</h6></button><button onclick="roman()">Times New Roman</button><button onclick="gray()">Gray Text</button><button onclick="p()">Paragraph</button>
+	<br/><br/><button onclick="printButtonPressed()">Print</button>
       </div>
     <div id="footer">
       Copyright 2014 by Eddie Li
