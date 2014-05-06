@@ -6,6 +6,81 @@
     <script language="javascript" type="text/javascript" src="main.js"></script>
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
+    <style>
+			gray {
+				color: gray;
+			}
+			gray-small {
+				color: gray;
+				font-size: 8px;
+			}
+			roman {
+				font-family: "Times New Roman";
+			}
+		</style>
+		<script type="text/javascript">
+				function bodyDidLoad() {
+				if (window.location.search == "?reload=1"){
+					var title_text = document.getElementById("title");
+					var body_text = document.getElementById("body");
+					if (localStorage.title_text){
+						title_text.value = localStorage.title_text;
+					}
+					if (localStorage.body_text){
+						body_text.value = localStorage.body_text;
+					}
+					didType();
+				}
+			}
+			function didType() {
+				var title_text = document.getElementById("title");
+				var title = document.getElementsByTagName("title")[0];
+				if (title_text.value == ""){
+					title.innerHTML = "TextEdit - New Document";
+				}
+				else {
+					title.innerHTML = "TextEdit - ".concat(title_text.value);
+				}
+			}
+			function printButtonPressed() {
+				var title_text = document.getElementById("title");
+				var body_text = document.getElementById("body");
+				if (title_text.value == ""){
+					document.body.innerHTML = "<strong>Unnamed Document</strong><br/><br/>".concat(body_text.value);
+				}
+				else {
+					document.body.innerHTML = "<strong>".concat(title_text.value).concat("</strong><br/><br/>").concat(body_text.value);
+				}
+				localStorage.title_text = title_text.value;
+				localStorage.body_text = body_text.value;
+				print();
+				window.location.search = "?reload=1";
+			}
+			function bold() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<strong>Put bolded text here</strong>");
+			}
+			function h1() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<h1>Put large text here</h1>");
+			}
+			function h6() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<h6>Put small text here</h6>");
+			}
+			function roman() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<roman>Put Times New Roman text here</roman>");
+			}
+			function gray() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<gray>Put Gray text here</gray>");
+			}
+			function p() {
+				var body_text = document.getElementById("body");
+				body_text.value = body_text.value.concat("<p>Put paragraph text here</p>");
+			}
+		</script>
   <head>
   <body>
     <div id="header">
@@ -13,11 +88,12 @@
       </a>
     </div>
       <div style="margin-left: 1em; margin-bottom: 1em;">
-        <h1>HTML Scratchpad</h1>
-        <textarea style="height: 12em; width: 70%;" id="htmltext">Type your HTML here</textarea><br />
-        <button onclick="viewHTML()">View</button>
-        <button onclick="saveHTML()">Save</button>
-        <button onclick="loadHTML()">Load Save</button>
+        <h1>Text Scratchpad</h1>
+        Title:<br/>
+			  <input type="text" id="title" onkeyup="didType()"><br/><br/>
+			  Body: <gray-small>(HTML code allowed)</gray-small><br/>
+			  <textarea id="body" style="height: 12em; width: 70%;"></textarea>
+			  <br/>Styles: <button onclick="bold()">Bold</button><button onclick="h1()"><h1>Large Font</h1></button><button onclick="h6()"><h6>Small Font</h6></button><button onclick="roman()">Times New Roman</button><button onclick="gray()">Gray Text</button><button onclick="p()">Paragraph</button>
       </div>
     <div id="footer">
       Copyright 2014 by Eddie Li
