@@ -17,16 +17,17 @@
 		</style>
 		<script type="text/javascript">
 			function bodyDidLoad() {
-			if (window.location.search == "?reload=1"){
-				var title_text = document.getElementById("title");
-				var body_text = document.getElementById("body");
-				if (localStorage.title_text){
-					title_text.value = localStorage.title_text;
+				if (window.location.search == "?reload=1"){
+					var title_text = document.getElementById("title");
+					var body_text = document.getElementById("body");
+					if (localStorage.title_text){
+						title_text.value = localStorage.title_text;
+					}
+					if (localStorage.body_text){
+						body_text.value = localStorage.body_text;
+					}
+					didType();
 				}
-				if (localStorage.body_text){
-					body_text.value = localStorage.body_text;
-				}
-				didType();
 			}
 			function loadText() {
 				var title_text = document.getElementById("title");
