@@ -11,7 +11,7 @@ function saveJS() {
 
 function loadJS() {
   var jstext=localStorage["jstext"];
-  if (jstext!="")
+  if (jstext!="undefined")
   {
     document.getElementById("jstext").value = jstext;
   }
