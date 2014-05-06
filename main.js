@@ -6,11 +6,11 @@ function viewJS() {
 
 function saveJS() {
   var jstext = document.getElementById("jstext").value;
-  localStorage.["jstext"] = jstext;
+  localStorage["jstext"] = jstext;
 }
 
 function loadJS() {
-  var jstext=localStorage.["jstext"];
+  var jstext=localStorage["jstext"];
   if (jstext!="")
   {
     document.getElementById("jstext").value = jstext;
