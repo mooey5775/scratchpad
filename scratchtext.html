@@ -29,6 +29,21 @@
 					didType();
 				}
 			}
+			function loadText() {
+				var title_text = document.getElementById("title");
+				var body_text = document.getElementById("body");
+				if (localStorage.title_text){
+					title_text.value = localStorage.title_text;
+				} else {
+					alert("No title save found!");
+				}
+				if (localStorage.body_text){
+					body_text.value = localStorage.body_text;
+				} else {
+					alert("No body save found!");
+				}
+				didType();
+			}
 			function didType() {
 				var title_text = document.getElementById("title");
 				var title = document.getElementsByTagName("title")[0];
@@ -52,6 +67,13 @@
 				localStorage.body_text = body_text.value;
 				print();
 				window.location.search = "?reload=1";
+			}
+			function saveText() {
+				var title_text = document.getElementById("title");
+				var body_text = document.getElementById("body");
+				localStorage.title_text = title_text.value;
+				localStorage.body_text = body_text.value;
+			}
 			}
 			function bold() {
 				var body_text = document.getElementById("body");
@@ -91,7 +113,7 @@
 	Body: <gray-small>(HTML code allowed)</gray-small><br/>
 	<textarea id="body" style="height: 12em; width: 70%;"></textarea>
 	<br/>Styles: <button onclick="bold()">Bold</button><button onclick="h1()"><h1>Large Font</h1></button><button onclick="h6()"><h6>Small Font</h6></button><button onclick="roman()">Times New Roman</button><button onclick="gray()">Gray Text</button><button onclick="p()">Paragraph</button>
-	<br/><br/><button onclick="printButtonPressed()">Print</button>
+	<br/><br/><button onclick="printButtonPressed()">Print</button><button onclick="saveText()">Save</button><button onclick="loadText()">Load Save</button>
       </div>
     <div id="footer">
       Copyright 2014 by Eddie Li
