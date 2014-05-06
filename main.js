@@ -20,3 +20,20 @@ function loadJS() {
     document.getElementById("jstext").value = jstext;
   }
 }
+
+function saveHTML() {
+  var htmltext = document.getElementById("htmltext").value;
+  localStorage.setItem("htmltext", htmltext);
+}
+
+function loadHTML() {
+  var htmltext=localStorage.getItem("htmltext");
+  if (htmltext === null)
+  {
+    alert("No save!");
+  }
+  else 
+  {
+    document.getElementById("htmltext").value = htmltext;
+  }
+}
