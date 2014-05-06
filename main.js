@@ -11,12 +11,12 @@ function saveJS() {
 
 function loadJS() {
   var jstext=localStorage["jstext"];
-  if (jstext!===null)
+  if (jstext === null)
   {
-    document.getElementById("jstext").value = jstext;
+    alert("No save!");
   }
   else 
   {
-    alert("No save!");
+    document.getElementById("jstext").value = jstext;
   }
 }
