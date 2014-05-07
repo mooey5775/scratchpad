@@ -20,11 +20,11 @@
 				if (window.location.search == "?reload=1"){
 					var title_text = document.getElementById("title");
 					var body_text = document.getElementById("body");
-					if (localStorage.title_text){
-						title_text.value = localStorage.title_text;
+					if (localStorage.latesttitle){
+						title_text.value = localStorage.latesttitle;
 					}
-					if (localStorage.body_text){
-						body_text.value = localStorage.body_text;
+					if (localStorage.latestbody){
+						body_text.value = localStorage.latestbody;
 					}
 					didType();
 				}
@@ -63,8 +63,8 @@
 				else {
 					document.body.innerHTML = "<strong>".concat(title_text.value).concat("</strong><br/><br/>").concat(body_text.value);
 				}
-				localStorage.title_text = title_text.value;
-				localStorage.body_text = body_text.value;
+				localStorage.latesttitle = title_text.value;
+				localStorage.latestbody = body_text.value;
 				print();
 				window.location.search = "?reload=1";
 			}
