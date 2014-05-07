@@ -1,7 +1,6 @@
 // Hello.
 function viewJS() {
   var jstext = document.getElementById("jstext").value;
-  saveJS();
   eval(jstext);
 }
 
