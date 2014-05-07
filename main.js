@@ -27,8 +27,9 @@ function saveJS() {
 function loadJS() {
   var files = "";
   for (var i = 0; i < localStorage.length; i++) {
-    if (localStorage.getItem(localStorage.key(i)).substr(0, 6) == "jstext") {
-      files = files.concat(localStorage.getItem(localStorage.key(i).substr(7))).concat(" ");
+    var key = localStorage.getItem(localStorage.key(i));
+    if (key.substr(0, 6) == "jstext") {
+      files = files.concat(key.substr(7))).concat(" ");
     }
   }
   var name = prompt("Choose file: ".concat(files))
