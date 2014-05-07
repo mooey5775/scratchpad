@@ -1,7 +1,12 @@
 // Hello.
 function viewJS() {
   var jstext = document.getElementById("jstext").value;
-  eval(jstext);
+  try {
+    eval(jstext);
+  }
+  catch(err) {
+    alert('Error: '.concat(err.message));
+  }
 }
 
 function saveJS() {
