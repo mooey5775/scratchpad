@@ -29,7 +29,7 @@ function loadJS() {
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.getItem(localStorage.key(i));
     if (key.substr(0, 6) == "jstext") {
-      files = files.concat(key.substr(7))).concat(" ");
+      files = files.concat(key.substr(7)).concat(" ");
     }
   }
   var name = prompt("Choose file: ".concat(files))
