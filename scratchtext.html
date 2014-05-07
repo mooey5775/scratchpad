@@ -36,9 +36,10 @@
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
     if (key.substr(0, 4) == "text") {
-      files = files.concat(key.substr(5)).concat(" | ");
+      files = files.concat("| ").concat(key.substr(5)).concat(" ");
     }
   }
+  files = files.concat("|");
   var name = prompt("Choose file: ".concat(files))
   var jstext=localStorage.getItem("text_".concat(name));
   if (jstext === null)
