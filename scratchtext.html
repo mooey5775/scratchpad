@@ -32,16 +32,24 @@
 			function loadText() {
 				var title_text = document.getElementById("title");
 				var body_text = document.getElementById("body");
-				if (localStorage.title_text){
-					title_text.value = localStorage.title_text;
-				} else {
-					alert("No title save found!");
-				}
-				if (localStorage.body_text){
-					body_text.value = localStorage.body_text;
-				} else {
-					alert("No body save found!");
-				}
+				var files = "";
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.substr(0, 4) == "text") {
+      files = files.concat(key.substr(5)).concat(" | ");
+    }
+  }
+  var name = prompt("Choose file: ".concat(files))
+  var jstext=localStorage.getItem("text_".concat(name));
+  if (jstext === null)
+  {
+    alert("No save found!");
+  }
+  else 
+  {
+    document.getElementById("body").value = jstext;
+    document.getElementById("title").value = name;
+  }
 				didType();
 			}
 			function didType() {
@@ -71,8 +79,6 @@
 			function saveText() {
 				var name = document.getElementById("title").value;
 				var jstext = document.getElementById("body").value;
-				localStorage.title_text = title_text.value;
-				localStorage.body_text = body_text.value;
   if (name != "") {
       localStorage.setItem("text_".concat(name), jstext);
       alert('Saved!');
