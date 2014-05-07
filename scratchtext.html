@@ -112,7 +112,7 @@
 				var body_text = document.getElementById("body");
 				body_text.value = body_text.value.concat("<p>Put paragraph text here</p>");
 			}
-			function deleteHTML() {
+			function deleteText() {
   var files = "";
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
@@ -147,7 +147,7 @@
 	Body: <gray-small>(HTML code allowed)</gray-small><br/>
 	<textarea id="body" style="height: 12em; width: 70%;"></textarea>
 	<br/>Styles: <button onclick="bold()">Bold</button><button onclick="h1()"><h1>Large Font</h1></button><button onclick="h6()"><h6>Small Font</h6></button><button onclick="roman()">Times New Roman</button><button onclick="gray()">Gray Text</button><button onclick="p()">Paragraph</button>
-	<br/><br/><button onclick="printButtonPressed()">Print</button><button onclick="saveText()">Save</button><button onclick="loadText()">Load Save</button>
+	<br/><br/><button onclick="printButtonPressed()">Print</button><button onclick="saveText()">Save</button><button onclick="loadText()">Load Save</button><button onclick="deleteText()">Delete Save</button>
       </div>
     <div id="footer">
       Copyright 2014 by Eddie Li
