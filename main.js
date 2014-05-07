@@ -25,10 +25,17 @@ function saveJS() {
 }
 
 function loadJS() {
-  var jstext=localStorage.getItem("jstext");
+  var files = "";
+  for (var i = 0, len = localStorage.length, i < len: ++i) {
+    if (localStorage.getItem(localStorage.key(i)).substr(0, 6) == "jstext") {
+      files = files.concat(localStorage.getItem(localStorage.key(i).substr(7)).concat(" ");
+    }
+  }
+  var name = prompt("Choose file: ".concat(files))
+  var jstext=localStorage.getItem("jstext_".concat(name));
   if (jstext === null)
   {
-    alert("No save!");
+    alert("No save found!");
   }
   else 
   {
