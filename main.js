@@ -8,7 +8,7 @@ function viewJS() {
 function saveJS() {
   var jstext = document.getElementById("jstext").value;
   var name = prompt("Name of file", "Untitled");
-  if (name != null) {
+  if (name != "") {
     if (localStorage.getItem("jstext_".concat(name)) != null) {
       var yes = confirm('Do you want to overwrite the existing file: '.concat(name).concat("?"));
       if (yes == true) {
