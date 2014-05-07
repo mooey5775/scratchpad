@@ -27,7 +27,7 @@ function saveJS() {
 function loadJS() {
   var files = "";
   for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.getItem(localStorage.key(i));
+    var key = localStorage.key(i);
     if (key.substr(0, 6) == "jstext") {
       files = files.concat(key.substr(7)).concat(" ");
     }
