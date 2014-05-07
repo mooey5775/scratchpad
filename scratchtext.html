@@ -40,7 +40,7 @@
     }
   }
   files = files.concat("|");
-  var name = prompt("Choose file: ".concat(files))
+  var name = prompt("Choose file: ".concat(files));
   var jstext=localStorage.getItem("text_".concat(name));
   if (jstext === null)
   {
@@ -112,6 +112,27 @@
 				var body_text = document.getElementById("body");
 				body_text.value = body_text.value.concat("<p>Put paragraph text here</p>");
 			}
+			function deleteHTML() {
+  var files = "";
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.substr(0, 4) == "text") {
+      files = files.concat("| ").concat(key.substr(5)).concat(" ");
+    }
+  }
+  files = files.concat("|");
+  var name = prompt("Choose file to delete: ".concat(files));
+  var jstext=localStorage.getItem("text_".concat(name));
+  if (jstext === null)
+  {
+    alert("No save to delete.");
+  }
+  else 
+  {
+    localStorage.removeItem("text_".concat(name));
+    alert("Deleted");
+  }
+}
 		</script>
   <head>
   <body onload="bodyDidLoad()">
