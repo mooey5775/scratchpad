@@ -37,7 +37,7 @@ function loadJS() {
     }
   }
   files = files.concat("|");
-  var name = prompt("Choose file: ".concat(files))
+  var name = prompt("Choose file: ".concat(files));
   var jstext=localStorage.getItem("jstext_".concat(name));
   if (jstext === null)
   {
@@ -84,7 +84,7 @@ function loadHTML() {
     }
   }
   files = files.concat("|");
-  var name = prompt("Choose file: ".concat(files))
+  var name = prompt("Choose file: ".concat(files));
   var jstext=localStorage.getItem("htmltext_".concat(name));
   if (jstext === null)
   {
@@ -93,5 +93,49 @@ function loadHTML() {
   else 
   {
     document.getElementById("htmltext").value = jstext;
+  }
+}
+
+function deleteHTML() {
+  var files = "";
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.substr(0, 8) == "htmltext") {
+      files = files.concat("| ").concat(key.substr(9)).concat(" ");
+    }
+  }
+  files = files.concat("|");
+  var name = prompt("Choose file to delete: ".concat(files));
+  var jstext=localStorage.getItem("htmltext_".concat(name));
+  if (jstext === null)
+  {
+    alert("No save to delete.");
+  }
+  else 
+  {
+    localStorage.removeItem("htmltext_".concat(name));
+    alert("Deleted");
+  }
+}
+
+function deleteJS() {
+  var files = "";
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key.substr(0, 6) == "jstext") {
+      files = files.concat("| ").concat(key.substr(7)).concat(" ");
+    }
+  }
+  files = files.concat("|");
+  var name = prompt("Choose file to delete: ".concat(files));
+  var jstext=localStorage.getItem("jstext_".concat(name));
+  if (jstext === null)
+  {
+    alert("No save to delete.");
+  }
+  else 
+  {
+    localStorage.removeItem("jstext_".concat(name));
+    alert("Deleted");
   }
 }
