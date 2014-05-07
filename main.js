@@ -70,7 +70,7 @@ function saveHTML() {
     }
   } else {
     alert('Please enter a name.');
-    saveJS();
+    saveHTML();
   }
 }
 
