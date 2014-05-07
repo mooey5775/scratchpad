@@ -7,7 +7,21 @@ function viewJS() {
 
 function saveJS() {
   var jstext = document.getElementById("jstext").value;
-  localStorage.setItem("jstext", jstext);
+  var name = prompt("Name of file", "Untitled");
+  if (name != null) {
+    if (localStorage.getItem("jstext_".concat(name)) != null) {
+      var yes = confirm('Do you want to overwrite the existing file: '.concat(name).concat("?"));
+      if (yes == true) {
+        localStorage.setItem("jstext_".concat(name), jstext);
+      }
+    } else {
+      localStorage.setItem("jstext_".concat(name), jstext);
+      alert('Saved!');
+    }
+  } else {
+    alert('Please enter a name.');
+    saveJS();
+  }
 }
 
 function loadJS() {
