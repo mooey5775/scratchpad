@@ -33,9 +33,10 @@ function loadJS() {
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
     if (key.substr(0, 6) == "jstext") {
-      files = files.concat(key.substr(7)).concat(" | ");
+      files = files.concat("| ").concat(key.substr(7)).concat(" ");
     }
   }
+  files = files.concat("|");
   var name = prompt("Choose file: ".concat(files))
   var jstext=localStorage.getItem("jstext_".concat(name));
   if (jstext === null)
@@ -79,9 +80,10 @@ function loadHTML() {
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
     if (key.substr(0, 8) == "htmltext") {
-      files = files.concat(key.substr(9)).concat(" | ");
+      files = files.concat("| ").concat(key.substr(9)).concat(" ");
     }
   }
+  files = files.concat("|");
   var name = prompt("Choose file: ".concat(files))
   var jstext=localStorage.getItem("htmltext_".concat(name));
   if (jstext === null)
